@@ -62,7 +62,7 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
 
   }
-test(roomData){
+  sendDetail(roomData){
   this.navCtrl.push(RoomDetailPage,roomData);
 }
 }

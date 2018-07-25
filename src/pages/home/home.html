@@ -6,7 +6,7 @@
 
 <ion-content padding>
 
-    <ion-card *ngFor="let room of roomDetail" (click)="test(room)">
+    <ion-card *ngFor="let room of roomDetail" (click)="sendDetail(room)">
         <ion-segment-button>
             <ion-card-header>
                 <span style="color:blue">{{room.roomType}}</span>
@@ -17,23 +17,5 @@
             </ion-card-content>
         </ion-segment-button>
     </ion-card>
-
-    <!-- <ion-list style="margin: 0" inset>
-        <button ion-item *ngFor="let room of roomDetail" (click)="test(room)">
-            <ion-card>
-            <ion-card-header>
-                <h3>{{room.roomType}}</h3>
-            </ion-card-header>
-            <ion-card-content>
-            <img src='{{room.img}}'><br><br>
-            <ul>
-                <li>{{room.detail}}</li>
-            </ul>
-            <br>
-            <h1 text-right id='priceRoom'>{{room.price}} ฿</h1>
-            </ion-card-content>
-        </ion-card>
-    </button> <br>
-    </ion-list> -->
 
 </ion-content>
