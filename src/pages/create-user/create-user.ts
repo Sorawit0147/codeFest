@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import {LoginPage} from '../login/login';
 /**
  * Generated class for the CreateUserPage page.
  *
@@ -32,7 +32,7 @@ createUser(){
   password:this.password,fname:this.fname,lname:this.lname,numphone:this.numphone};
     this.User.push(data);
     // console.log(this.User);
-
+    this.navCtrl.push(LoginPage);
   }
   check(checkUser){
     for(var i=0;i<this.User.length;i++){
