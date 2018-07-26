@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import{UserPage} from '../user/user';
 /**
  * Generated class for the BookingPage page.
  *
@@ -27,6 +27,10 @@ export class BookingPage {
   }
 logS(){
   console.log(this.qtyDay)
+}
+bookingFinish(){
+  var status = true
+    this.navCtrl.push(UserPage,status);
 }
 
 
