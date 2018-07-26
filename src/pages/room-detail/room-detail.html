@@ -1,6 +1,6 @@
 <ion-header>
 
-    <ion-navbar>
+    <ion-navbar color="colorTab">
         <ion-title>Room Detail</ion-title>
     </ion-navbar>
 
@@ -12,13 +12,33 @@
     <ion-list>
         <h1>{{roomDetail.roomType}}</h1>
         <ion-item>
-            <img src='{{roomDetail.img}}'>
+            <!-- <img src='{{roomDetail.img1}}'> -->
+            <ion-slides>
+                <ion-slide>
+                    <img src='{{roomDetail.img1}}'>
+                </ion-slide>
+                <ion-slide>
+                    <img src='{{roomDetail.img2}}'>
+                </ion-slide>
+                <ion-slide>
+                    <img src='{{roomDetail.img3}}'>
+                </ion-slide>
+            </ion-slides>
+            <h1>Total: 5 room</h1>
         </ion-item>
         <h4><b>Detail</b></h4>
         <ul>
             <li>{{roomDetail.detail}}</li>
+            <li>{{roomDetail.view}}</li>
+            <li>{{roomDetail.size}}</li>
+            <li>{{roomDetail.bathroom}}</li>
+            <li>{{roomDetail.wifi}}</li>
         </ul>
         <h1 text-right id='priceRoom'>Price: {{roomDetail.price}} ฿</h1>
+
     </ion-list>
-    <button ion-button full color="secondary">Booking</button>
+
+
+    <button ion-button full color="secondary" (click)="routeBooking()">Booking</button>
+
 </ion-content>

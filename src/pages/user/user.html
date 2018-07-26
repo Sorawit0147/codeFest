@@ -1,6 +1,6 @@
 <ion-header>
 
-    <ion-navbar>
+    <ion-navbar color="colorTab">
         <ion-title>User</ion-title>
     </ion-navbar>
 
@@ -10,8 +10,13 @@
 <ion-content padding>
     <div text-center>
         <ion-icon name="contact"></ion-icon>
+    </div><br>
+
+    <div class="center">
+        <button [hidden]="hindTab" ion-button color="danger" (click)="swapTag1()">Log out</button>
     </div>
-    <ion-card>
+
+    <ion-card [hidden]="hindTab">
         <ion-card-header>
             Firstname:
         </ion-card-header>
@@ -20,5 +25,22 @@
             Lastname:
         </ion-card-header>
     </ion-card><br>
-    <button ion-button full>Booking History</button>
+
+    <ion-card [hidden]="hindTab" color="colorBar">
+        <ion-card-header>
+            Booking History
+        </ion-card-header>
+        <ion-list style="margin: 0" inset>
+            <button ion-item (click)="sendQrPage('Room 39')">
+                <ion-icon item-start  color="primary" ></ion-icon>
+                Delux Room | Room 39
+                </button>
+            <button ion-item (click)="sendQrPage('Room 35')">
+                <ion-icon item-start  color="primary" ></ion-icon>
+                Superior Room | Room 35
+                </button>
+        </ion-list>
+    </ion-card>
+
+    <button ion-button full [hidden]="hindLogin" (click)="goLogin()">Log In</button>
 </ion-content>

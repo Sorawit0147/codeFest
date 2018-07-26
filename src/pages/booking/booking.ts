@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {BookingPage} from '../booking/booking';
 
 /**
- * Generated class for the RoomDetailPage page.
+ * Generated class for the BookingPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,23 +10,24 @@ import {BookingPage} from '../booking/booking';
 
 @IonicPage()
 @Component({
-  selector: 'page-room-detail',
-  templateUrl: 'room-detail.html',
+  selector: 'page-booking',
+  templateUrl: 'booking.html',
 })
-export class RoomDetailPage {
+export class BookingPage {
 
-  roomDetail ={};
+  dateCheckin ='1998-11-04T11:06Z';
+  qtyDay:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad RoomDetailPage');
-    this.roomDetail = this.navParams.data;
+    console.log('ionViewDidLoad BookingPage');
+  }
+logS(){
+  console.log(this.qtyDay)
+}
 
-  }
-  routeBooking(){
-    this.navCtrl.push(BookingPage);
-  }
 
 }

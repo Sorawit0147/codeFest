@@ -1,17 +1,17 @@
 <ion-header>
-    <ion-navbar>
+    <ion-navbar color="colorTab">
         <ion-title>Home</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-    <ion-card *ngFor="let room of roomDetail" (click)="sendDetail(room)">
+    <ion-card *ngFor="let room of roomDetail" (click)="sendDetail(room)" color="colorBar">
         <ion-segment-button>
             <ion-card-header>
-                <span style="color:blue">{{room.roomType}}</span>
+                <span style="color:rgb(0, 0, 0)">{{room.roomType}}</span>
             </ion-card-header>
-            <img src='{{room.img}}'>
+            <img src='{{room.img1}}'>
             <ion-card-content>
                 <h1 text-right id='priceRoom'>Price: {{room.price}} ฿</h1>
             </ion-card-content>

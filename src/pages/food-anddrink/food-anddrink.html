@@ -1,0 +1,31 @@
+<ion-header>
+
+    <ion-navbar color="colorTab">
+        <ion-title>Food And Drink</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-segment [(ngModel)]="serviceRoom">
+        <ion-segment-button value="food">
+            Food
+        </ion-segment-button>
+        <ion-segment-button value="drink">
+            Drik
+        </ion-segment-button>
+    </ion-segment>
+
+    <ion-list>
+        <ion-card *ngFor="let service of getService(serviceRoom)">
+            <ion-card-content>
+                <img src="{{service.img}}">
+                <ion-label>{{service.name}}</ion-label>
+                <ion-checkbox [(ngModel)]="service.foodSt" color="secondary" (click)="logData()"></ion-checkbox>
+            </ion-card-content>
+        </ion-card>
+    </ion-list>
+    <button ion-button full (click)="doRadio()">confirm</button>
+</ion-content>
