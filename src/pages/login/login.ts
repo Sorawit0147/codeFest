@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import{CreateUserPage}from '../create-user/create-user';
+import{CreateUserPage} from '../create-user/create-user';
+import{UserPage} from '../user/user';
+
 /**
  * Generated class for the LoginPage page.
  *
@@ -17,8 +19,9 @@ export class LoginPage {
   id:any;
   password:any;
   checkUser=[];
-
-  constructor(public navCtrl: NavController, public navParams: NavParams,private user:CreateUserPage) {
+  
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    
   }
 
   ionViewDidLoad() {
@@ -28,7 +31,9 @@ export class LoginPage {
     var data={id:this.id,password:this.password}
     this.checkUser.push(data);
     
-    this.user.check(this.checkUser);
+    // this.creUser.check(this.checkUser);
+    var status = true
+    this.navCtrl.push(UserPage,status);
   }
   
   createUser(){

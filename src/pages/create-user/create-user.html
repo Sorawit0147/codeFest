@@ -7,16 +7,16 @@
 <ion-header>
 
     <ion-navbar>
-        <ion-title>createUser</ion-title>
+        <ion-title>Create User</ion-title>
     </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-    <ion-item>
 
-        Username:
+
+    <!-- Username:
         <ion-item>
             <ion-input type="text" [value]="id" [(ngModel)]="id"></ion-input>
         </ion-item>
@@ -35,7 +35,29 @@
         numPhone:
         <ion-item>
             <ion-input type="text" [value]="numphone" [(ngModel)]="numphone"></ion-input>
-        </ion-item>
-        <button lightgray full (click)="createUser();">save</button>
+        </ion-item> -->
+
+    <ion-item>
+        <ion-label color="primary">Username:</ion-label>
+        <ion-input type="text" [value]="id" [(ngModel)]="id"></ion-input>
     </ion-item>
+    <ion-item>
+        <ion-label color="primary">Password:</ion-label>
+        <ion-input type="password" [value]="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary"> First Name:</ion-label>
+        <ion-input type="text" [value]="fname" [(ngModel)]="fname"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary"> Last Name:</ion-label>
+        <ion-input type="text" [value]="lname" [(ngModel)]="lname"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary"> Phone:</ion-label>
+        <ion-input type="text" [value]="numphone" [(ngModel)]="numphone"></ion-input>
+    </ion-item>
+    <br>
+    <button ion-button full (click)="createUser()" color="secondary">Save</button>
+
 </ion-content>

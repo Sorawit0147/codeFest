@@ -23,6 +23,10 @@ export class UserPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad UserPage');
+    if(this.navParams.data==true){
+      this.swapTag2()
+    }
+     
   }
 
   swapTag1(){

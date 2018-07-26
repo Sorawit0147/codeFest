@@ -14,7 +14,7 @@
 
 
 <ion-content padding>
-    <ion-item>
+    <!-- <ion-item>
         Username:
         <ion-item>
             <ion-input type="text" [value]="id" [(ngModel)]="id"></ion-input>
@@ -23,8 +23,20 @@
         <ion-item>
             <ion-input type="password" [value]="password" [(ngModel)]="password"></ion-input>
         </ion-item>
-        <button lightgray full (click)="login();">Log In</button>
-        <br><br><br> CreateUser
-        <button lightgray full (click)="createUser();">CreateUser</button>
+    </ion-item><br> -->
+
+    <ion-item>
+        <ion-label color="primary">Username:</ion-label>
+        <ion-input placeholder="Username" type="text" [value]="id" [(ngModel)]="id"></ion-input>
     </ion-item>
+    <ion-item>
+        <ion-label color="primary">Password:</ion-label>
+        <ion-input placeholder="Password" type="password" [value]="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+
+    <button ion-button full (click)="login();">Log In</button>
+    <div class="center">
+        <button ion-button round outline (click)="createUser();">Register</button>
+    </div>
 </ion-content>

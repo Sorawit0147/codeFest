@@ -47,5 +47,8 @@ createUser(){
     }
 
   }
+  log(){
+    return '5555'
+  }
 
 }
